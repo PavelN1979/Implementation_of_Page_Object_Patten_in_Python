@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
 class MainPageLocators():
     ADD_PRODUCT = (By.CSS_SELECTOR, "form[id='add_to_basket_form']")
 
@@ -21,5 +20,11 @@ class ProductPageLocators():
 
 class PricePageLocators(): 
     PRICE_PRODUCT = (By.XPATH, "//*[@id='messages']/div[3]/div/p[1]/strong")
-    PRICE_BASKET = (By.XPATH, "//*[@id='content_inner']/article/div[1]/div[2]/p[1]") 
+    PRICE_BASKET = (By.XPATH, "//*[@id='content_inner']/article/div[1]/div[2]/p[1]")
 
+class  BasePageLocators():
+    USER_EMAIL = (By.XPATH, "//*[@id='id_registration-email']")
+    USER_PASSWORD = (By.XPATH, "//*[@id='id_registration-password1']")
+    USER_REPEAT_PASSWORD = (By.XPATH, "//*[@id='id_registration-password2']")
+    USER_BUTTON = (By.XPATH, "//*[@id='register_form']/button")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
