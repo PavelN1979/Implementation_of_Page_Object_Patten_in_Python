@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators():
     ADD_PRODUCT = (By.CSS_SELECTOR, "form[id='add_to_basket_form']")
-
     VIEW_CART = (By.CSS_SELECTOR, "span > a[class='btn btn-default']")
     CART_IS_EMPTY = (By.CSS_SELECTOR, "#content_inner > p")
     BASKET_WITHOUT_GOODS = (By.CSS_SELECTOR, "div.alertinner > p > strong")

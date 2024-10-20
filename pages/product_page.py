@@ -1,14 +1,11 @@
 from .base_page import BasePage
-from .locators import MainPageLocators
-from .locators import ProductPageLocators
-from .locators import PricePageLocators
+from .locators import MainPageLocators, ProductPageLocators, PricePageLocators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
 class ProductPage(BasePage):
     def add_product_to_cart(self):
-        assert self.browser.find_element(*MainPageLocators.ADD_PRODUCT), "The product has not been added to the cart"
         self.browser.find_element(*MainPageLocators.ADD_PRODUCT).click()
        
     def added_product_by_name_product(self):
