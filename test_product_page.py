@@ -64,10 +64,14 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
 
     
 @pytest.mark.need_review
-def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
     page = BasketPage(browser, link)
     page.open()
+    page.should_be_select_all_products()
+    page.select_all_products()
+    page.should_be_go_to_product_page()
+    page.go_to_product_page()
     page.should_be_go_to_cart()
     page.go_to_cart()
     page.should_be_a_basket_without_goods()
